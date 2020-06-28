@@ -1,0 +1,26 @@
+package application;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class aula19_Date {
+
+	public static void main(String[] args) throws ParseException {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/YYYY");
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+		
+		Date y1 = sdf1.parse("28/06/2020");
+		Date y2 = sdf1.parse("28/06/2020 11:37:12");
+		
+		System.out.println(y1 + "\n " + y2);
+		
+		sc.close();
+	}
+
+}

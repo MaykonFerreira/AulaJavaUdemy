@@ -1,0 +1,46 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class aula16_list {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		// Generico, List é uma interface
+		List<String> list = new ArrayList<>();
+		list.add("Maria");
+		list.add("Alex");
+		list.add("Bob");
+		list.add("Anna");
+		// Inclui na posicao
+		list.add(2,"Maykon");
+		
+		// Tamanho da Lista
+		System.out.println("Qtde de linhas : " + list.size());
+		// Remove pela Busca
+		//list.remove("Anna");
+		
+		for (String x : list) {
+			System.out.println(x);
+		}
+		
+		// Remove a Posicao
+		//list.remove(1);
+		System.out.println("-----------------");
+		// Remove atraves do Predicado 
+		list.removeIf(x-> x.charAt(0)=='M');
+		for (String x : list) {
+			System.out.println(x);
+		}		
+		
+		System.out.println("POsicao do Bob : " + list.indexOf("Bob"));
+		
+		sc.close();
+	}
+
+}

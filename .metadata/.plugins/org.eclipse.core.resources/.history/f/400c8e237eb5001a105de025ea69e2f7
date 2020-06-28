@@ -1,0 +1,22 @@
+package entities;
+
+public class Aluno {
+	public String Aluno;
+	public double n1;
+	public double n2;
+	public double n3;
+	
+
+	public String Resultado() {
+		double media = (((n1 * 3.00 ) + (n2 * 3.50) + (n3 * 3.50))/1000 );
+		System.out.println(media);
+		if ( media < 60.00) {
+			return "Final Grade = " + String.format("%.2f", (media)) + " \n PASS" ;
+		}
+		else {
+			return "Final Grade = " + String.format("%.2f", (media)) + " \n FAILED %n %.2f" + (60 - media) ;	
+		}
+			
+		
+	}
+}

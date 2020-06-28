@@ -1,0 +1,26 @@
+package entities;
+
+public class Product {
+	public String nome;
+	public double price;
+	public int qtde;
+	
+	public void add(int qtde) {
+		/* this é usado para instaciar a variavel principar da Classe
+		 * quando se usa o mesmo nome ( ex qtde ) 
+		 */
+		this.qtde += qtde;
+	}
+	public void remove (int qtde) {
+		this.qtde -= qtde;
+	}
+	public double valorestoque() {
+		return price * this.qtde;
+	}
+	public String toString() {
+		return nome + " , R$ "
+	           + String.format("%.2f", price) + " , " +
+				qtde + " unit , total R$ " + String.format("%.2f",valorestoque());
+	}
+
+}

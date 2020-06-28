@@ -1,0 +1,35 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Product;
+
+public class aula04_produtos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Product pdt = new Product();
+		System.out.println("Entre com os produtos");
+		System.out.print("Nome : ");
+		pdt.nome = sc.nextLine();
+		System.out.print("Preço : ");
+		pdt.price = sc.nextDouble();
+		System.out.print("Qtde :");
+		pdt.qtde = sc.nextInt();
+		System.out.println("Produtos data : " + pdt.toString());
+		System.out.println("Digite a quantidade para adicionar no Estoque");
+		int qtde = sc.nextInt();
+		pdt.add(qtde);
+		System.out.println("Produtos data : " + pdt.toString());
+		System.out.println("Digite a quantidade para remover no Estoque");
+		qtde = sc.nextInt();
+		pdt.remove(qtde);(qtde);
+		System.out.println("Produtos data : " + pdt.toString());		
+		//System.out.println(pdt.nome + " , " + pdt.price + " , " + pdt.qtde + " , Est R$ " + pdt.valorestoque());
+		sc.close();
+	}
+
+}

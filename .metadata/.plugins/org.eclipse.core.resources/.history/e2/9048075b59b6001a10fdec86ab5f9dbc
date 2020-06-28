@@ -1,0 +1,42 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.vetor_alugado;
+
+public class aula13_vetor_aluguel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int i = 0;
+		vetor_alugado [] vect = new vetor_alugado[10];
+		
+		System.out.println("Quantidade de Quartos a ser alugado");
+		int n = sc.nextInt();
+		for (i = 0 ; i < n ; i ++) {
+			System.out.println("");
+			sc.nextLine();
+			System.out.println((i+1) + "º Quarto");
+			System.out.print("Informe o Nome : ");
+			String nome = sc.nextLine();
+			System.out.print("Digite o email : ");
+			String email = sc.nextLine();
+			System.out.print("Nº do quarto : ");
+			int numero = sc.nextInt();
+			vect[numero] = new vetor_alugado(nome,email);
+			
+		}
+		for (i = 0 ; i < vect.length ; i ++) {
+			if (vect[i] != null) {
+				System.out.println((i) + " : " + vect[i].getNome() + " , " + vect[i].getEmail());
+			}
+			
+		}		
+		
+		
+	}
+
+}

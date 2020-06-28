@@ -1,0 +1,8 @@
+package entities;
+
+public class Cotacao {
+	public double cot_atual ;
+	public double dolar (double valor) {
+		return (valor * cot_atual) + ((valor * cot_atual) * 0.06) ;
+	}
+}

@@ -1,0 +1,33 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Cotacao;
+import entities.Product;
+
+public class aula10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.print ("Enter account number : ");
+		int numero = sc.nextInt();
+		System.out.print ("Enter account number : ");
+		String nome = sc.nextLine();
+		char resp = sc.nextLine().chars(0);
+		if ()
+		Product pdt = new Product(nome, price);
+		
+		Cotacao.cot_atual= sc.nextDouble();
+		System.out.println("Digite a qtde que será comprada ");
+		int qtde = sc.nextInt();
+		System.out.printf("Você irá gastar R$ %.2f",Cotacao.conversao(qtde));
+		
+		
+		
+		sc.close();
+	}
+
+}

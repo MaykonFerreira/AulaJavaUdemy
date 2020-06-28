@@ -1,0 +1,43 @@
+package entities;
+
+public class Produtc_gere {
+
+	public String nome;
+	public double price;
+	public int qtde;
+	
+	
+// Melhora a forma de Programar e simplifica evitando erro na programação
+	public Product(String nome, double price, int qtde) {
+		this.nome = nome ;
+		this.price = price;
+		this.qtde = qtde;
+	}
+	public Product() {
+
+	}
+	// Melhora a forma de Programar e simplifica evitando erro na programação
+		public Product(String nome, double price) {
+			this.nome = nome ;
+			this.price = price;
+			this.qtde = 0; // não precisa informar valor padrão
+		}	
+	public void add(int qtde) {
+		/* this é usado para instaciar a variavel principar da Classe
+		 * quando se usa o mesmo nome ( ex qtde ) 
+		 */
+		this.qtde += qtde;
+	}
+	public void ret (int qtde) {
+		this.qtde -= qtde;
+	}
+	public double valorestoque() {
+		return price * this.qtde;
+	}
+	public String toString() {
+		return nome + " , R$ "
+	           + String.format("%.2f", price) + " , " +
+				qtde + " unit , total R$ " + String.format("%.2f",valorestoque());
+	}
+
+}

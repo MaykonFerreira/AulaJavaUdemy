@@ -1,0 +1,23 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Aluno;
+
+public class aula07_aluno {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Aluno AL = new Aluno();
+		AL.Aluno = sc.nextLine();
+		AL.n1 = sc.nextDouble();
+		AL.n2 = sc.nextDouble();
+		AL.n3 = sc.nextDouble();
+		AL.Resultado();
+		sc.close();
+	}
+
+}

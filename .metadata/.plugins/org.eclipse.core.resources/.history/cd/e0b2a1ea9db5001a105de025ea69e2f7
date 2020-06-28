@@ -1,0 +1,38 @@
+package entities;
+
+public class Encapsulamento {
+	public int numero;
+	private String nome;
+	public double valor;
+	public double saldo;
+	
+	
+// Melhora a forma de Programar e simplifica evitando erro na programação
+	public Encapsulamento(int numero,String nome, double valor) {
+		this.numero = numero ;
+		this.nome = nome;
+		this.valor = valor;
+		this.saldo = valor;
+	}
+	
+	public void dep(double saldo) {
+		/* this é usado para instaciar a variavel principar da Classe
+		 * quando se usa o mesmo nome ( ex qtde ) 
+		 */
+		System.out.println("Update account data:");
+		this.saldo += saldo;
+	}
+	public void saque (double saldo) {
+		System.out.println("Update account data:");
+		this.saldo -= saldo - 5.00;
+	}
+	public double SD() {
+		
+		return this.saldo;
+	}
+	public String toString() {
+		return "Account " + this.numero + " , Holder " 
+				+ this.nome + " , Balance R$ "
+	           + String.format("%.2f", this.saldo) + "\n";
+	}
+}

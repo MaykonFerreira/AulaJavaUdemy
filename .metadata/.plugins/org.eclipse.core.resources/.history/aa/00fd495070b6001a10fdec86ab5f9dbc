@@ -1,0 +1,34 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class aula18_matriz {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		 int n = sc.nextInt();
+		 int neg = 0;
+		 
+		 int [][] mat = new int [n][n];
+		 for (int l = 0 ; l < n ; l++) {
+			 for (int c = 0 ; c < n ; c ++) {
+				 mat [l][c] = sc.nextInt();
+				 if (mat [l][c] < 0 ) {
+					 neg ++;
+				 }
+			 }
+			 
+		 }
+		 System.out.println("Diagonal ");
+		 for (int l = 0 ; l < n ; l++) {
+				 System.out.print(mat [l][l] + " ") ;
+		 }		 
+		
+		 System.out.println("\n\nQty Negativo(s) " + neg);
+		 sc.close();
+	}
+
+}

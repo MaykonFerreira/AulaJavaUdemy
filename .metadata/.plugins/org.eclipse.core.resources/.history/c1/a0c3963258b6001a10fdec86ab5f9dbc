@@ -1,0 +1,28 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.vetor_pdt;
+
+public class aula13_vetor_aluguel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		int i = 0;
+		vetor_pdt [] vect = new vetor_pdt[10];
+		
+		System.out.println("Quantidade de Quartos a ser alugado");
+		int n = sc.nextInt();
+		for (i = 0 ; i < n ; i ++) {
+			sc.nextLine();
+			String nome = sc.nextLine();
+			double preco = sc.nextDouble();
+			vect[i] = new vetor_alugado(nome,preco);
+			
+		}
+	}
+
+}

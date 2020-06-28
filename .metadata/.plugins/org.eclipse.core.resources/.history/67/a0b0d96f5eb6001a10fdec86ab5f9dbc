@@ -1,0 +1,24 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class aula15_for_each {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		String[] ds = new String[] {"Domingo","2ª Feira","3ª Feira",
+									"4ª Feira","5ª Feira","6ª Feira","Sábado"};
+		
+		for (int i = 0; i < ds.length; i++) {
+			System.out.println(i);
+		}
+		System.out.println("-----------");
+		for (String dia : ds) {
+			System.out.println(dia);
+		}
+	}
+
+}

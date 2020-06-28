@@ -1,0 +1,25 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Product;
+
+public class aula04_produtos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println();
+		Product pdt = new Product();
+		System.out.println("Entre com os produtos");
+		
+		pdt.nome = sc.nextLine();
+		pdt.price = sc.nextDouble();
+		pdt.qtde = sc.nextInt();
+		System.out.println(pdt.nome + " , " + pdt.price + " , " + pdt.qtde + " , Est " + pdt.valorestoque());
+		sc.close();
+	}
+
+}

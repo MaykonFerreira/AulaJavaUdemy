@@ -1,0 +1,44 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Encapsulamento;
+
+public class aula10 {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.print ("Enter account number : ");
+		int numero = sc.nextInt();
+		System.out.print ("Enter Nome : ");
+		String nome = sc.next();
+		
+		System.out.print ("Deseja fazer um Deposito (y/n) ? ");
+		char resp = sc.next().charAt(0);
+		if (resp == 'y') {
+			System.out.print ("Entre com o Valor : ");
+			double dep = sc.nextDouble();
+			Encapsulamento mov = new Encapsulamento(numero,nome,dep);
+			System.out.println ("Account data :");
+			System.out.println(mov.toString());
+			System.out.print ("Entre com o Valor deposito :");
+			dep = sc.nextDouble();
+			mov.dep(dep);
+			System.out.println(mov.toString());
+			System.out.print ("Entre com o Valor Saque :");
+			dep = sc.nextDouble();
+			mov.saque(dep);
+			System.out.println(mov.toString());
+			
+			
+		}
+		
+		
+		sc.close();
+	}
+
+}
